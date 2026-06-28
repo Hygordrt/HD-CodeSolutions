@@ -30,7 +30,7 @@ export default function Rodape() {
                 <i className="fab fa-github" />
               </a>
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5561993930092"
                 className="btn-social"
                 title="WhatsApp"
                 aria-label="WhatsApp"
@@ -71,7 +71,7 @@ export default function Rodape() {
             <h4>Contato</h4>
             <div className="contato-item">
               <i className="fab fa-whatsapp" />
-              <span>(00) 00000-0000</span>
+              <span>(61) 99393-0092</span>
             </div>
             <div className="contato-item">
               <i className="fas fa-envelope" />

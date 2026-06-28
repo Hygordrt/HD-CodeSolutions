@@ -110,7 +110,7 @@ export default function Hero() {
     return () => observer.disconnect();
   }, []);
 
-  const linkWa = 'https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20um%20sistema.';
+  const linkWa = 'https://wa.me/5561993930092?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20um%20sistema.';
 
   return (
     <section id="inicio" className="hero">
