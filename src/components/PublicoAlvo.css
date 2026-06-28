@@ -1,0 +1,41 @@
+/* Seção de público-alvo */
+.secao-publico { background: #071B36; }
+
+/* Grid de 4 colunas */
+.grid-publico {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* Card com efeito de deslize lateral */
+.card-publico {
+  background: rgba(13, 45, 94, 0.38);
+  border: 1px solid rgba(39, 168, 255, 0.1);
+  border-radius: 13px;
+  padding: 1.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.card-publico:hover {
+  border-color: rgba(39, 168, 255, 0.32);
+  background: rgba(10, 108, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.publico-icone { font-size: 1.7rem; flex-shrink: 0; }
+
+.publico-nome { font-weight: 600; font-size: 0.92rem; }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grid-publico { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid-publico { grid-template-columns: 1fr; }
+}

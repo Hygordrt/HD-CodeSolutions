@@ -1,0 +1,165 @@
+/* Rodapé */
+.rodape {
+  background: #040F1E;
+  border-top: 1px solid rgba(39, 168, 255, 0.14);
+  padding: 60px 2rem 28px;
+}
+
+.rodape-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Grid do topo do rodapé */
+.rodape-topo {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(39, 168, 255, 0.08);
+}
+
+/* Marca */
+.logo-rodape {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  margin-bottom: 0.9rem;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0A6CFF, #27A8FF);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(39, 168, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.logo-nome {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.logo-nome span { color: #27A8FF; }
+
+.rodape-marca p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  max-width: 270px;
+  margin-top: 0.5rem;
+}
+
+/* Botões de redes sociais */
+.redes-sociais {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+}
+
+.btn-social {
+  width: 38px;
+  height: 38px;
+  background: rgba(10, 108, 255, 0.1);
+  border: 1px solid rgba(39, 168, 255, 0.18);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.btn-social:hover {
+  background: #0A6CFF;
+  border-color: #0A6CFF;
+  color: #fff;
+  box-shadow: 0 0 14px rgba(10, 108, 255, 0.4);
+}
+
+/* Colunas de links */
+.rodape-coluna h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: #27A8FF;
+}
+
+.rodape-coluna ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.rodape-coluna a {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: 0.3s;
+}
+
+.rodape-coluna a:hover { color: #fff; }
+
+/* Itens de contato */
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0.65rem;
+}
+
+.contato-item i { color: #27A8FF; width: 16px; }
+
+/* Base do rodapé */
+.rodape-base {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rodape-base p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.rodape-links {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.rodape-links a {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.28);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.rodape-links a:hover { color: rgba(255, 255, 255, 0.6); }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .rodape-topo { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .rodape-topo { grid-template-columns: 1fr; gap: 1.75rem; }
+}

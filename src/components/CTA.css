@@ -1,0 +1,86 @@
+/* Seção de CTA com fundo gradiente */
+.secao-cta {
+  background: linear-gradient(135deg, #0A1535, #0D2D6A, #0A1535);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ponto de luz ao centro */
+.secao-cta::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(10, 108, 255, 0.2), transparent 70%);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Grade decorativa */
+.secao-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(10, 108, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 108, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Conteúdo centralizado */
+.cta-conteudo {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.cta-titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 0.9rem;
+  line-height: 1.2;
+}
+
+.cta-titulo .destaque {
+  background: linear-gradient(135deg, #0A6CFF, #27A8FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-subtitulo {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.68);
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Botão grande de WhatsApp */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  padding: 1.05rem 2.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.08rem;
+  box-shadow: 0 0 36px rgba(37, 211, 102, 0.35);
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 55px rgba(37, 211, 102, 0.6);
+}
+
+.cta-btn i { font-size: 1.35rem; }

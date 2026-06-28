@@ -1,0 +1,119 @@
+/* Seção de processo */
+.secao-processo {
+  background: #071B36;
+}
+
+/* Linha do tempo centralizada */
+.linha-tempo {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Linha vertical ao centro */
+.linha-tempo::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(39, 168, 255, 0.4), transparent);
+  transform: translateX(-50%);
+}
+
+/* Cada item da linha do tempo */
+.etapa {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 38px);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+/* Itens pares ficam no lado direito */
+.etapa:nth-child(even) {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 38px);
+}
+
+/* Ponto circular com ícone */
+.etapa-ponto {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  background: rgba(10, 108, 255, 0.18);
+  border: 2px solid #0A6CFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.etapa:hover .etapa-ponto {
+  background: #0A6CFF;
+  box-shadow: 0 0 18px rgba(10, 108, 255, 0.5);
+}
+
+/* Card de conteúdo */
+.etapa-card {
+  background: rgba(13, 45, 94, 0.5);
+  border: 1px solid rgba(39, 168, 255, 0.14);
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  max-width: 285px;
+  transition: 0.3s;
+}
+
+.etapa:hover .etapa-card {
+  border-color: rgba(39, 168, 255, 0.38);
+  box-shadow: 0 0 18px rgba(10, 108, 255, 0.1);
+}
+
+.etapa-numero {
+  font-size: 0.72rem;
+  color: #27A8FF;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+}
+
+.etapa-nome {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.etapa-desc {
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.5;
+}
+
+/* Responsividade mobile — linha do tempo em coluna única */
+@media (max-width: 768px) {
+  .linha-tempo::before { left: 22px; }
+
+  .etapa,
+  .etapa:nth-child(even) {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 64px;
+  }
+
+  .etapa-ponto {
+    left: 22px;
+    transform: translateY(-50%);
+  }
+
+  .etapa-card { max-width: none; }
+}

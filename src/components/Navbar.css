@@ -1,0 +1,148 @@
+/* Barra de navegação */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  transition: 0.3s;
+}
+
+/* Estilo ao rolar a página */
+.navbar.rolado {
+  background: rgba(7, 27, 54, 0.96);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(39, 168, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(10, 108, 255, 0.1);
+}
+
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0A6CFF, #27A8FF);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(39, 168, 255, 0.4);
+}
+
+.logo-nome {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.logo-nome span {
+  color: #27A8FF;
+}
+
+/* Links do menu */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #27A8FF;
+}
+
+/* Botão de CTA no menu */
+.nav-cta {
+  background: linear-gradient(135deg, #0A6CFF, #27A8FF) !important;
+  color: #fff !important;
+  padding: 0.6rem 1.4rem !important;
+  border-radius: 50px;
+  font-weight: 700 !important;
+  box-shadow: 0 0 20px rgba(10, 108, 255, 0.35);
+  transition: all 0.3s !important;
+}
+
+.nav-cta:hover {
+  box-shadow: 0 0 35px rgba(39, 168, 255, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+/* Botão hambúrguer (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Animação do hambúrguer quando ativo */
+.hamburger.ativo span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.ativo span:nth-child(2) { opacity: 0; }
+.hamburger.ativo span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu aberto em tela cheia no mobile */
+  .nav-links.aberto {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 27, 54, 0.98);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 999;
+  }
+
+  .nav-links.aberto a {
+    font-size: 1.3rem;
+  }
+}

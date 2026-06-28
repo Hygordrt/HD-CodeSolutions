@@ -1,0 +1,73 @@
+/* Seção de diferenciais */
+.secao-diferenciais {
+  background: linear-gradient(135deg, #071B36, #0A1F3D, #071B36);
+}
+
+/* Grid de 4 colunas */
+.grid-diferenciais {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+}
+
+/* Card com efeito de borda inferior colorida no hover */
+.card-diferencial {
+  text-align: center;
+  padding: 2.4rem 1.4rem;
+  background: rgba(13, 45, 94, 0.4);
+  border: 1px solid rgba(39, 168, 255, 0.1);
+  border-radius: 20px;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.card-diferencial::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(135deg, #0A6CFF, #27A8FF);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card-diferencial:hover {
+  transform: translateY(-8px);
+  border-color: rgba(39, 168, 255, 0.28);
+}
+
+.card-diferencial:hover::after { opacity: 1; }
+
+.dif-icone {
+  font-size: 2.4rem;
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.dif-nome {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  color: #27A8FF;
+}
+
+.dif-desc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grid-diferenciais { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid-diferenciais { grid-template-columns: 1fr; }
+}

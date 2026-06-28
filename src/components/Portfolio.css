@@ -1,0 +1,299 @@
+/* Seção de portfólio */
+.secao-portfolio { background: #071B36; }
+
+/* Grid de 3 colunas */
+.grid-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+/* Item do portfólio com efeito hover */
+.item-portfolio {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(39, 168, 255, 0.14);
+  cursor: pointer;
+  transition: 0.4s;
+  aspect-ratio: 16 / 10;
+  background: rgba(13, 45, 94, 0.5);
+}
+
+.item-portfolio:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 28px rgba(10, 108, 255, 0.2);
+  border-color: rgba(39, 168, 255, 0.38);
+  z-index: 1;
+}
+
+/* Estrutura do mockup */
+.portfolio-mock { width: 100%; height: 100%; display: flex; flex-direction: column; overflow: hidden; }
+
+/* Cabeçalho do mockup */
+.mock-header {
+  padding: 0.65rem 0.9rem;
+  background: rgba(7, 27, 54, 0.9);
+  border-bottom: 1px solid rgba(39, 168, 255, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.mock-dots { display: flex; gap: 3px; }
+
+.mock-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.mock-label {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-left: 0.4rem;
+}
+
+/* Corpo do mockup */
+.mock-body { flex: 1; padding: 0.65rem; display: flex; flex-direction: column; gap: 0.4rem; overflow: hidden; }
+.mock-body-row { flex: 1; display: flex; gap: 0.45rem; padding: 0.5rem; overflow: hidden; }
+.mock-body-mobile { flex: 1; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.75rem; gap: 0.75rem; overflow: hidden; }
+
+/* Utilitários de linha/barra */
+.mock-linha { border-radius: 3px; background: rgba(39, 168, 255, 0.14); }
+.mock-linha.w { width: 88%; height: 7px; }
+.mock-linha.m { width: 58%; height: 7px; }
+.mock-linha.s { width: 38%; height: 7px; }
+.mock-linha.accent { background: rgba(10, 108, 255, 0.4); }
+
+/* Grid de 2 colunas */
+.mock-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem; flex: 1; }
+
+/* Gráfico de barras */
+.mock-chart-bars {
+  background: rgba(10, 108, 255, 0.1);
+  border: 1px solid rgba(39, 168, 255, 0.12);
+  border-radius: 6px;
+  padding: 0.45rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.mock-barra {
+  flex: 1;
+  background: linear-gradient(135deg, #0A6CFF, #27A8FF);
+  border-radius: 2px 2px 0 0;
+  opacity: 0.65;
+}
+
+/* Linhas de texto no mock */
+.mock-linhas {
+  background: rgba(10, 108, 255, 0.1);
+  border: 1px solid rgba(39, 168, 255, 0.12);
+  border-radius: 6px;
+  padding: 0.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Grid de 3 colunas no mock */
+.mock-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
+
+/* KPI card no mockup */
+.mock-kpi {
+  background: rgba(10, 108, 255, 0.14);
+  border: 1px solid rgba(39, 168, 255, 0.14);
+  border-radius: 5px;
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mock-kpi-label { height: 4px; background: rgba(39, 168, 255, 0.5); border-radius: 2px; width: 65%; }
+.mock-kpi-valor { height: 11px; border-radius: 2px; }
+
+/* Mockup financeiro */
+.mock-row-flex { display: flex; gap: 0.4rem; }
+.mock-metric { flex: 1; background: rgba(10, 108, 255, 0.14); border: 1px solid rgba(39, 168, 255, 0.14); border-radius: 5px; height: 38px; }
+.mock-metric.verde { background: rgba(0, 255, 136, 0.08); border-color: rgba(0, 255, 136, 0.2); }
+.mock-metric.vermelho { background: rgba(255, 87, 87, 0.08); border-color: rgba(255, 87, 87, 0.2); }
+
+.mock-tabela {
+  background: rgba(10, 108, 255, 0.07);
+  border: 1px solid rgba(39, 168, 255, 0.1);
+  border-radius: 5px;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.mock-tab-title { height: 4px; background: rgba(39, 168, 255, 0.35); border-radius: 2px; width: 42%; margin-bottom: 6px; }
+.mock-tab-row { display: flex; align-items: center; gap: 4px; margin-bottom: 5px; }
+.mock-tab-dot { width: 5px; height: 5px; background: #27A8FF; border-radius: 50%; flex-shrink: 0; }
+.mock-tab-line { height: 4px; background: rgba(255, 255, 255, 0.14); border-radius: 2px; }
+.mock-tab-line.flex1 { flex: 1; }
+.mock-tab-line.w25 { width: 25%; }
+.mock-tab-line.verde { background: rgba(0, 255, 136, 0.45); }
+.mock-tab-line.vermelho { background: rgba(255, 87, 87, 0.45); }
+
+/* Mockup de atendimento / CRM */
+.mock-sidebar { width: 42%; display: flex; flex-direction: column; gap: 0.3rem; }
+.mock-sidebar-ativo {
+  background: rgba(10, 108, 255, 0.2);
+  border: 1px solid rgba(39, 168, 255, 0.22);
+  border-radius: 6px;
+  height: 38%;
+  padding: 0.4rem;
+}
+.mock-sidebar-item {
+  background: rgba(10, 108, 255, 0.08);
+  border: 1px solid rgba(39, 168, 255, 0.1);
+  border-radius: 6px;
+  flex: 1;
+}
+
+.mock-chat {
+  flex: 1;
+  background: rgba(10, 108, 255, 0.05);
+  border: 1px solid rgba(39, 168, 255, 0.09);
+  border-radius: 6px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mock-chat-title { height: 4px; background: rgba(39, 168, 255, 0.4); border-radius: 2px; width: 58%; margin-bottom: 4px; }
+.mock-chat-msg { height: 4px; background: rgba(255, 255, 255, 0.14); border-radius: 2px; width: 90%; }
+.mock-chat-msg.m { width: 74%; background: rgba(255, 255, 255, 0.1); }
+.mock-chat-msg.s { width: 85%; background: rgba(255, 255, 255, 0.1); }
+.mock-chat-send {
+  margin-top: auto;
+  height: 17px;
+  background: rgba(10, 108, 255, 0.5);
+  border-radius: 4px;
+}
+
+/* Mockup portal */
+.mock-nav-bar {
+  height: 28px;
+  background: rgba(10, 108, 255, 0.14);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+  flex-shrink: 0;
+}
+
+.mock-nav-item { height: 5px; background: rgba(255, 255, 255, 0.18); border-radius: 2px; width: 15%; }
+.mock-nav-item.destaque { background: rgba(39, 168, 255, 0.6); width: 20%; }
+.mock-nav-cta { margin-left: auto; height: 13px; background: rgba(10, 108, 255, 0.6); border-radius: 3px; width: 20%; }
+
+.mock-card-portal {
+  background: rgba(10, 108, 255, 0.1);
+  border: 1px solid rgba(39, 168, 255, 0.1);
+  border-radius: 5px;
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mock-portal-img { height: 18px; background: rgba(39, 168, 255, 0.14); border-radius: 3px; margin-bottom: 2px; }
+
+/* Mockup mobile */
+.mock-phone {
+  width: 80px;
+  background: rgba(13, 45, 94, 0.8);
+  border: 1px solid rgba(39, 168, 255, 0.22);
+  border-radius: 14px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  flex-shrink: 0;
+}
+
+.mock-phone-header { height: 7px; background: rgba(39, 168, 255, 0.5); border-radius: 4px; margin-bottom: 3px; }
+.mock-phone-card {
+  background: rgba(10, 108, 255, 0.14);
+  border-radius: 5px;
+  padding: 0.28rem;
+  height: 28px;
+}
+
+.mock-phone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.mock-phone-tile { height: 18px; background: rgba(10, 108, 255, 0.2); border-radius: 3px; }
+.mock-phone-footer { height: 5px; background: rgba(10, 108, 255, 0.4); border-radius: 3px; margin-top: 2px; }
+
+.mock-phone-desc { flex: 1; display: flex; flex-direction: column; gap: 0.28rem; }
+.mock-phone-btn {
+  margin-top: 0.3rem;
+  height: 16px;
+  background: rgba(10, 108, 255, 0.5);
+  border: 1px solid rgba(39, 168, 255, 0.14);
+  border-radius: 4px;
+}
+
+/* Mockup landing page */
+.mock-hero-lp {
+  background: linear-gradient(135deg, rgba(10, 108, 255, 0.3), rgba(39, 168, 255, 0.14));
+  border-radius: 7px;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mock-lp-btn { height: 15px; background: rgba(10, 108, 255, 0.7); border-radius: 8px; width: 38%; margin-top: 2px; }
+
+.mock-feature {
+  height: 32px;
+  background: rgba(10, 108, 255, 0.1);
+  border: 1px solid rgba(39, 168, 255, 0.1);
+  border-radius: 4px;
+  padding: 0.22rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Overlay com informações do projeto */
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 27, 54, 0.95) 0%, transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+}
+
+.item-portfolio:hover .portfolio-overlay { opacity: 1; }
+
+.portfolio-info h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.portfolio-info p {
+  font-size: 0.78rem;
+  color: #27A8FF;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grid-portfolio { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid-portfolio { grid-template-columns: 1fr; }
+}

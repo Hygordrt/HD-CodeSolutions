@@ -1,0 +1,136 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+/* Variáveis de cor e design */
+:root {
+  --azul-escuro: #071B36;
+  --azul: #0A6CFF;
+  --azul-claro: #27A8FF;
+  --branco: #FFFFFF;
+  --cinza: #8892A4;
+  --gradiente: linear-gradient(135deg, #0A6CFF, #27A8FF);
+  --gradiente-escuro: linear-gradient(135deg, #071B36, #0D2D5E);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--azul-escuro);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Utilitários de animação de entrada ao rolar a página */
+.revelar {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: all 0.65s ease;
+}
+.revelar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+.d5 { transition-delay: 0.5s; }
+.d6 { transition-delay: 0.6s; }
+
+/* Badge de identificação de seção */
+.badge-secao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(10, 108, 255, 0.1);
+  border: 1px solid rgba(39, 168, 255, 0.22);
+  color: var(--azul-claro);
+  padding: 0.38rem 1rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Títulos e subtítulos de seção */
+.titulo-secao {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.9rem;
+}
+.titulo-secao .destaque {
+  background: var(--gradiente);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.subtitulo-secao {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.7;
+  max-width: 580px;
+}
+.cabecalho-secao {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.cabecalho-secao .subtitulo-secao {
+  margin: 0 auto;
+}
+
+/* Container com largura máxima centralizado */
+.container { max-width: 1280px; margin: 0 auto; }
+
+/* Espaçamento padrão de seções */
+section { padding: 96px 2rem; }
+
+/* Botão WhatsApp verde */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.98rem;
+  box-shadow: 0 0 28px rgba(37, 211, 102, 0.3);
+  transition: 0.3s;
+}
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 44px rgba(37, 211, 102, 0.55);
+}
+
+/* Botão com borda */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(39, 168, 255, 0.45);
+  transition: 0.3s;
+}
+.btn-outline:hover {
+  background: rgba(39, 168, 255, 0.1);
+  border-color: var(--azul-claro);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  section { padding: 68px 1.25rem; }
+}

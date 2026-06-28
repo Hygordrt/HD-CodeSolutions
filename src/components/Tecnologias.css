@@ -1,0 +1,82 @@
+/* Seção de tecnologias */
+.secao-tecnologias {
+  background: linear-gradient(180deg, #071B36, #0A1F3D);
+  overflow: hidden;
+}
+
+/* Wrapper com máscara de fade nas laterais */
+.tech-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-wrapper::before,
+.tech-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tech-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #071B36, transparent);
+}
+
+.tech-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #071B36, transparent);
+}
+
+/* Faixa com animação de scroll automático */
+.tech-faixa {
+  display: flex;
+  gap: 1.25rem;
+  animation: rolar 22s linear infinite;
+  width: max-content;
+}
+
+/* Para ao passar o mouse */
+.tech-faixa:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rolar {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Card de cada tecnologia */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(13, 45, 94, 0.5);
+  border: 1px solid rgba(39, 168, 255, 0.14);
+  border-radius: 14px;
+  padding: 1.25rem 1.75rem;
+  min-width: 120px;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.tech-item:hover {
+  border-color: rgba(39, 168, 255, 0.45);
+  box-shadow: 0 0 18px rgba(10, 108, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.tech-icone {
+  font-size: 1.9rem;
+  color: #27A8FF;
+}
+
+.tech-nome {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
